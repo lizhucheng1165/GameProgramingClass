@@ -1,0 +1,5 @@
+﻿  LJS2.cpp
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS2\LJS2\LJS2.cpp(9,9): warning C4101: 'nTest' :참조되지 않은 지역 변수입니다.
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS2\LJS2\LJS2.cpp(8,9): warning C4101: 'nData' :참조되지 않은 지역 변수입니다.
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS2\LJS2\LJS2.cpp(10,9): warning C4101: 'nNumber' :참조되지 않은 지역 변수입니다.
+  LJS2.vcxproj -> C:\Users\SBSGAME\Desktop\lizhucheng\LJS2\x64\Debug\LJS2.exe
