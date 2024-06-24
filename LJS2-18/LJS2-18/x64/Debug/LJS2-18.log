@@ -1,0 +1,4 @@
+﻿  LJS2-18.cpp
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS2-18\LJS2-18\LJS2-18.cpp(24,9): warning C4477: 'printf' : 서식 문자열 '%zd'에 'unsigned __int64' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS2-18\LJS2-18\LJS2-18.cpp(40,9): warning C4477: 'printf' : 서식 문자열 '%zd'에 'unsigned __int64' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+  LJS2-18.vcxproj -> C:\Users\SBSGAME\Desktop\lizhucheng\LJS2-18\x64\Debug\LJS2-18.exe
