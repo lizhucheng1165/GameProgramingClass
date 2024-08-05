@@ -1,0 +1,3 @@
+﻿  parent.cpp
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS4-01\LJS4-01\parent.cpp(3,11): error C2511: 'C_PARENT::C_PARENT(void)': 오버로드된 멤버 함수가 'C_PARENT'에 없습니다.
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS4-01\LJS4-01\parent.cpp(8,10): error C2512: 'C_PARENT::C_PARENT': 사용할 수 있는 적절한 기본 생성자가 없습니다.

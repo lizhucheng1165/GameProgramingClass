@@ -1,0 +1,2 @@
+﻿LJS4-02.obj : error LNK2019: "public: __cdecl C_TEST::C_TEST(void)" (??0C_TEST@@QEAA@XZ)main 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS4-02\LJS4-02\x64\Debug\LJS4-02.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
