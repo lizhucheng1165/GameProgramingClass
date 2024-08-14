@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS04-16\LJS04-16\main.cpp(29,9): warning C4476: 'printf' : 서식 지정자에 알 수 없는 형식 필드 문자 'b'이(가) 있습니다.
+C:\Users\SBSGAME\Desktop\lizhucheng\LJS04-16\LJS04-16\main.cpp(29,26): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  LJS04-16.vcxproj -> C:\Users\SBSGAME\Desktop\lizhucheng\LJS04-16\x64\Debug\LJS04-16.exe
