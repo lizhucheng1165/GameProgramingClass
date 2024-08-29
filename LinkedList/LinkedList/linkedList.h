@@ -15,4 +15,6 @@ private:
 	};
 
 	S_NODE* m_pBegin;
+	S_NODE* m_pEnd;
+	S_NODE* CreateNode(int nData);
 };
