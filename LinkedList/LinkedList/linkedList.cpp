@@ -34,7 +34,7 @@ void C_LINKED_LIST::PushBack(int nData)
 	//m_pEnd->pNext = CreateNode(nData);
 	//m_pEnd = m_pEnd->pNext;
 
-
+	
 	S_NODE* pNew = CreateNode(nData);
 
 	if (!m_pBegin)
@@ -47,6 +47,47 @@ void C_LINKED_LIST::PushBack(int nData)
 	}
 
 	m_pEnd = pNew;
+
+
+
+}
+
+void C_LINKED_LIST::Remove(int nData)
+{
+	S_NODE* pFind = m_pBegin;
+	S_NODE* pUp{};
+
+	while (pFind)
+	{
+		S_NODE* pNext = pFind->pNext;
+
+		if (pFind->nData == nData)
+		{
+			S_NODE* pDel = pFind;
+
+			if (pDel == m_pBegin)
+			{
+				m_pBegin = pFind->pNext;
+			}
+			else
+			{
+				pUp->pNext = pFind->pNext;
+			}
+
+			if (pDel == m_pEnd)
+			{
+				m_pEnd = pUp;
+			}
+
+
+			delete pDel;
+		}
+		else
+		{
+			pUp = pFind;
+		}
+		pFind = pNext;
+	}
 
 }
 

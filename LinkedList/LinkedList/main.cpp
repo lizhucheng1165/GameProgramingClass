@@ -8,12 +8,23 @@ int main()
 {
 	C_LINKED_LIST cList{};
 
+	//cList.PushBack(1);
+	//cList.PushBack(2);
+	//cList.PushBack(3);
+	//cList.PushBack(4);
+	//cList.PushBack(5);
+	//cList.PushBack(6);
+
 	cList.PushBack(1);
 	cList.PushBack(2);
-	cList.PushBack(3);
-	cList.PushBack(4);
-	cList.PushBack(5);
-	cList.PushBack(6);
+	cList.PushBack(2);
+	cList.PushBack(2);
+	cList.PushBack(2);
+	cList.PushBack(2);
+	cList.PushBack(2);
+
+	cList.Remove(2);
+	cList.PushBack(999);
 
 	cList.Print();
 }

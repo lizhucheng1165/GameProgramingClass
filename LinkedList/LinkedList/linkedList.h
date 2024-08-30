@@ -5,6 +5,7 @@ class  C_LINKED_LIST
 public:
 	C_LINKED_LIST() = default;
 	void PushBack(int nData);
+	void Remove(int nData);
 	void Print();
 
 private:
