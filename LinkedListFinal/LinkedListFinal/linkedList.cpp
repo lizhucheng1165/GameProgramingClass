@@ -48,17 +48,52 @@ void C_LINKEDLIST::LinkNode(C_NODE* pNodeA, C_NODE* pNodeB)
 	pNodeB->m_pPrev = pNodeA;
 }
 
+void C_LINKEDLIST::DeleteNodeBetweenNodes(C_NODE* pPrev, C_NODE* pDel, C_NODE* pNext)
+{
+	LinkNode(pPrev, pNext);
+	delete pDel;
+}
+
+void C_LINKEDLIST::EraseNode(C_NODE* pDel)
+{
+	LinkNode(pDel->m_pPrev, pDel->m_pNext);
+	delete pDel;
+}
+
 void C_LINKEDLIST::PopBack()
 {
+	//DeleteNodeBetweenNodes(m_pEnd->m_pPrev->m_pPrev, m_pEnd->m_pPrev, m_pEnd);
+	C_NODE* pDel = m_pEnd->m_pPrev;
+	EraseNode(pDel);
 }
 
 void C_LINKEDLIST::PopFront()
 {
+	C_NODE* pDel = m_pBegin->m_pNext;
+	EraseNode(pDel);
+	//DeleteNodeBetweenNodes(m_pBegin, m_pBegin->m_pNext, m_pBegin->m_pNext->m_pNext);
 }
 
-void C_LINKEDLIST::Erase(C_NODE* pNode)
-{
-}
+
+//void C_LINKEDLIST::DeleteNodeBetweenNodes(C_NODE* pPrev, C_NODE* pNext)
+//{
+//	C_NODE* pDel = pPrev->m_pNext;
+//
+//	LinkNode(pPrev, pNext);
+//
+//	delete pDel;
+//}
+//
+//void C_LINKEDLIST::PopBack()
+//{
+//	DeleteNodeBetweenNodes(m_pEnd->m_pPrev->m_pPrev, m_pEnd);
+//}
+//
+//void C_LINKEDLIST::PopFront()
+//{
+//	DeleteNodeBetweenNodes(m_pBegin, m_pBegin->m_pNext->m_pNext);
+//}
+
 
 C_NODE* C_LINKEDLIST::GetBegin()
 {

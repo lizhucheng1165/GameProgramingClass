@@ -9,6 +9,7 @@ private:
 	C_NODE* CreateNode(int nData);
 	void InsertNodeBetweenNodes(C_NODE* pNodeA, C_NODE* pNodeB, C_NODE* pSrcNode);
 	void LinkNode(C_NODE* pNodeA, C_NODE* pNodeB);
+	void DeleteNodeBetweenNodes(C_NODE* pPrev, C_NODE* pDel, C_NODE* pNext);
 public:
 	C_LINKEDLIST();
 	~C_LINKEDLIST();
@@ -18,7 +19,7 @@ public:
 	void PushFront(int nData);
 	void PopBack();
 	void PopFront();
-	void Erase(C_NODE* pNode);
+	void EraseNode(C_NODE* pDel);
 	C_NODE* GetBegin();
 	C_NODE* GetEnd();
 };
