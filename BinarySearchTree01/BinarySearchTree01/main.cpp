@@ -8,16 +8,28 @@ int main()
 {
 	C_BST cBst{};
 
-	cBst.Insert(4);
-	cBst.Insert(1);
-	cBst.Insert(5);
-	cBst.Insert(6);
-	cBst.Insert(2);
-	cBst.Insert(9);
-	cBst.Insert(7);
-	cBst.Insert(8);
-	cBst.Insert(3);
+	cBst.Insert2(4);
+	cBst.Insert2(1);
+	cBst.Insert2(5);
+	cBst.Insert2(6);
+	cBst.Insert2(2);
+	cBst.Insert2(9);
+	cBst.Insert2(7);
+	cBst.Insert2(8);
+	cBst.Insert2(3);
 
+	//if (cBst.Insert2(30))
+	//	printf("성공\n");
+	//else
+	//{
+	//	printf("실패\n");
+	//}
+
+	cBst.Print();
+	cBst.Erase(3);
+	cBst.Erase(8);
+	cBst.Erase(2);
+	cBst.Erase(9);
 	cBst.Print();
 }
 
