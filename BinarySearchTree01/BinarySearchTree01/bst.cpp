@@ -42,6 +42,20 @@ C_BST::S_NODE* C_BST::AddNode(S_NODE* pNode, int nData)
     return pNode;
 }
 
+void C_BST::FindMaxNode(S_NODE*& pMax, S_NODE*& pMaxUp)
+{
+    if (!pMax->pR)
+    {
+        return;
+    }
+
+    pMaxUp = pMax;
+    pMax = pMax->pR;
+    FindMaxNode(pMax, pMaxUp);
+
+
+}
+
 bool C_BST::Insert(int nData)
 {
 
@@ -119,11 +133,23 @@ void C_BST::Erase(int nData)
 
     if (pNode->pL && pNode->pR)
     {
+       
+        S_NODE* pBackUp = pNode;
+        FindMaxNode(pNode, pUp);
 
-        return;
+        pBackUp->nData = pNode->nData;
+        ////왼쪽노드중 가장 큰노드
+        //S_NODE* pMax = pNode->pL;
+        //S_NODE* pMaxUp = pNode;
+        //FindMaxNode(pMax, pMaxUp);
+        //printf("max %d , up %d\n", pMax->nData, pMaxUp->nData);
+        //오른쪽 노드중 가장 작은 노드
+
+        //pNode->nData = pMax->nData;
+        //pNode = pMax;
+        //pUp = pMaxUp;
     }
 
-    printf("up : %d\n", pUp->nData);
     S_NODE* pDel = pNode;
     S_NODE* pChild = pNode->pL;
     if (pNode->pR)
@@ -131,7 +157,11 @@ void C_BST::Erase(int nData)
         pChild = pNode->pR;
     }
 
-    if (pNode->nData < pUp->nData)
+    if (!pUp)
+    {
+        m_pRoot = pChild;
+    }
+    else if (pNode->nData < pUp->nData)
     {
         pUp->pL = pChild;
     }
@@ -180,19 +210,6 @@ void C_BST::Erase(int nData)
 
 }
 
-void C_BST::DeleteNode(S_NODE* pDel, S_NODE* pUp)
-{
-    if (pDel->nData < pUp->nData)
-    {
-        pUp->pL = pDel->pL;
-    }
-    else if (pDel->nData > pUp->nData)
-    {
-        pUp->pR = pDel->pR;
-    }
-
-    delete pDel;
-}
 void C_BST::Print()
 {
     PrintNode(m_pRoot);

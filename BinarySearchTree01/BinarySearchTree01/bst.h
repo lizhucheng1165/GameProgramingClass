@@ -18,10 +18,10 @@ private:
 
 private:
 	S_NODE* CreateNode(int nData);
-	void DeleteNode(S_NODE* pDel, S_NODE* pUp);
 private:
 	void PrintNode(S_NODE* pNode);
 	S_NODE* AddNode(S_NODE* pNode, int nData);
+	void FindMaxNode(S_NODE*& pMax, S_NODE*& pMaxUp);
 public:
 	C_BST() = default;
 
