@@ -11,7 +11,7 @@ private:
 
 private:
 	C_TABLE() = default;
-	void Init();
+	void Init(int* pBall, int nBallCount, int nStrike);
 	C_GAME::E_TYPE GetType(int nNumber);
 
 };
