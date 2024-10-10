@@ -12,5 +12,8 @@ private:
 public:
 	C_MGR() = default;
 	bool Insert(const char* str, int nData);
+	//void Erase(const char* str);
+	bool Erase(const char* str);
 	void Print();
+
 };

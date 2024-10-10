@@ -27,6 +27,34 @@ bool C_MGR::Insert(const char* str, int nData)
     pairResult.first->second = pData;
 }
 
+//void C_MGR::Erase(const char* str)
+//{
+//    std::map<std::string, C_DATA*>::iterator iterFind{};
+//    iterFind = m_mapData.find(str);
+//
+//    delete iterFind->second;
+//    iterFind->second = nullptr;
+//    m_mapData.erase(iterFind);
+//
+//
+//}
+
+bool C_MGR::Erase(const char* str)
+{
+    std::map<std::string, C_DATA*>::iterator iterFind{};
+    iterFind = m_mapData.find(str);
+
+    if (iterFind == m_mapData.end())
+    {
+        return false;
+    }
+
+    delete iterFind->second;
+    m_mapData.erase(iterFind);
+
+    return true;
+}
+
 void C_MGR::Print()
 {
     std::map<std::string, C_DATA*>::iterator iter = m_mapData.begin();

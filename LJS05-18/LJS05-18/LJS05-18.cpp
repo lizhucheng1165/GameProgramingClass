@@ -13,6 +13,8 @@ int main()
 	cMgr.Insert("ddd", 4);
 	cMgr.Insert("eee", 5);
 
+	cMgr.Erase("bbb");
+
 	cMgr.Print();
 	//std::string strA{};
 	//std::string strB{};
